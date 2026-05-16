@@ -1,0 +1,22 @@
+name: CI_Pipeline
+on:
+   push:
+      branches:
+            - prod
+   pull_request:
+    branches:
+        - prod
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Setup NodeJs  
+              uses: actions/setup-node@v4
+              with:
+                node-version: 25
+            - name: Install Dependencies
+              run: npm install    
+            - name: Build Project
+              run: npm run build             
