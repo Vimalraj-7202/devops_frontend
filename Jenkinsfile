@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 git branch: 'prod',
@@ -27,5 +26,11 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('Log the Build'){
+            steps{
+                echo "Build completed successfully!"
+            }
+        }
     }
+
 }
