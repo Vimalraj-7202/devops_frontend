@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 git branch: 'prod',
@@ -16,6 +15,12 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                sh 'npm install'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'rm -rf node_modules package-lock.json'
                 sh 'npm install'
             }
         }
