@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'prod',
-                url: 'https://github.com/USERNAME/REPO.git'
+                url: 'https://github.com/Vimalraj-7202/devops_frontend.git'
             }
         }
 
