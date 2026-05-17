@@ -9,7 +9,7 @@ function App() {
         marginTop: '20vh'
       }}
     >
-      <h1>My Fronted Deployment</h1>
+      <h1>My Fronted Deployment & WebHook Configured</h1>
     </div>
   );
 }
